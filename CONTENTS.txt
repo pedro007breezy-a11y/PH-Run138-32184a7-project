@@ -1,0 +1,6 @@
+Project: iosph988-prog/PH-
+Commit: 32184a7
+Workflow: .github/workflows/ios-kyojinx.yml
+Run: 138 (33287681980)
+Artifact: nubank-preloaded-cards-home-patches (26.4 MB)
+This package contains the original project archive, patch files, API client files, scripts and the exact workflow. Historical archives and unrelated repository artifacts were omitted.
