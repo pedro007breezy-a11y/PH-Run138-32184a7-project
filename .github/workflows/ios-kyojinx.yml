@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: macos-latest
-    steps:
+    steps:AVA
       - uses: actions/checkout@v4
       - name: Extract original project
         shell: bash
@@ -100,4 +100,3 @@ jobs:
 
 
 
-      - name: Remove Cleaner and Wallpapers feature section
