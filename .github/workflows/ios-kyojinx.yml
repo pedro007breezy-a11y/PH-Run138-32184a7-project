@@ -70,18 +70,6 @@ jobs:
           p.write_text(t)
           PY
 
-        shell: bash
-        run: |
-          set -euo pipefail
-          CONTENT_SWIFT=source/3105-1.1.1/ThreeOneOSFive/ContentView.swift
-          python3 - "$CONTENT_SWIFT" <<'PY'
-          from pathlib import Path
-          import re, sys
-          p=Path(sys.argv[1]); text=p.read_text()
-          text2=re.sub(r'^\s*featuresSection\s*$\n?', '', text, count=1, flags=re.MULTILINE)
-          if text2 == text: raise SystemExit('featuresSection call not found')
-          p.write_text(text2)
-          PY
       - name: Add preloaded game cards and resources
         shell: bash
         run: |
