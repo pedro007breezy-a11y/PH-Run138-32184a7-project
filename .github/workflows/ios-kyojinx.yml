@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: macos-latest
-    steps:
+    steps:AVA
       - uses: actions/checkout@v4
       - name: Extract original project
         shell: bash
@@ -11,6 +11,7 @@ jobs:
           set -euo pipefail
           rm -rf source build dist
           mkdir -p source build dist
+          cat 3105-1.1.1-original.tar.gz.part-* > 3105-1.1.1-original.tar.gz
           tar -xzf 3105-1.1.1-original.tar.gz -C source
           PROJECT=source/3105-1.1.1/ThreeOneOSFive.xcodeproj
           echo "PROJECT=$PROJECT" >> "$GITHUB_ENV"
